@@ -1,0 +1,24 @@
+//Esther Bier's Homework
+
+
+import java.util.*;
+
+public class MyHmwk {
+    public static void main(String[] args){
+        List<String> puppyList = new ArrayList<String>(){{
+                        add("Labradoodle");
+                        add("Shi-Tzu");
+                        add("German Shepard");
+                        add("Shi-Tzu");
+                        add("Labradoodle");
+                          }};
+        System.out.println("Original Puppy List: " + puppyList.toString());
+        
+    Set<String> puppySet = new HashSet<String>();
+    
+    for (String thisPuppy : puppyList){
+        puppySet.add(thisPuppy);
+    }
+        System.out.println ("Duplicates-Removed Puppy Set: " + puppySet.toString());
+    }
+}

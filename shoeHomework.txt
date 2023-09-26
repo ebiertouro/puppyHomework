@@ -1,0 +1,25 @@
+//Esther Bier Homework
+
+import java.util.*;
+
+public class Shoes {
+    public static void main(String[] args){
+        
+        Map<String, String> shoeMap = new TreeMap<>();
+        
+        shoeMap.put("Airbouncers", "Nike");
+        shoeMap.put("Cloudrunners", "Nike");
+        shoeMap.put("Bella Donna", "Hermes ");
+        shoeMap.put("Prima Donna", "Hermes");
+        shoeMap.put("Clara Heels", "Sam Edelman");
+        shoeMap.put("Martha Slingbacks", "Sam Edelman");
+        shoeMap.put("Sleeks", "Vans");
+        shoeMap.put("Cheaps", "Vans");
+        shoeMap.put("Cloggies", "Crocs");
+        shoeMap.put("Slippies", "Crocs");
+        
+    for (Map.Entry<String, String> entry : shoeMap.entrySet()) {
+        System.out.println("Shoe Name : " + entry.getKey()
+             + ". Manufactures : " + entry.getValue());  
+        System.out.println();
+    }}}
