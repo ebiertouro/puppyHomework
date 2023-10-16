@@ -1,0 +1,37 @@
+package iteratorIterable;
+import java.util.*;
+
+public class Itrtr implements Iterable<Integer>{
+
+	private int[] array;
+
+	public Itrtr(int[] array) {
+	this.array = array;
+	}
+
+	@Override
+	public Iterator<Integer> iterator() {
+	return new myIterator();
+	}
+	
+public class myIterator implements Iterator<Integer>{
+	private int num;
+	@Override
+	public boolean hasNext() {
+	boolean hasNext;
+	if (num < array.length)
+		hasNext = true;
+	else
+		hasNext = false;
+	return hasNext;
+	}
+
+	@Override
+	public Integer next() {
+	if (!this.hasNext())
+		throw new NoSuchElementException();
+	else
+		return array[num++];
+		}
+	}
+}
